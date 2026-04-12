@@ -211,7 +211,8 @@ function App() {
   const scrollToContent = () => {
     const eventsSection = document.getElementById('events');
     if (eventsSection) {
-      eventsSection.scrollIntoView({ behavior: 'smooth' });
+      const top = eventsSection.getBoundingClientRect().top + window.scrollY - 40;
+      window.scrollTo({ top, behavior: 'smooth' });
     }
   };
 
