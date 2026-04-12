@@ -265,8 +265,7 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: 2px 2px 4px rgba(139, 21, 56, 0.1);
-  line-height: 1.5;
-  padding-top: 0.15em;
+  line-height: 1.2;
   white-space: nowrap;
 }
 
