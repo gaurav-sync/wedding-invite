@@ -426,7 +426,7 @@ function App() {
       {/* Footer Section */}
       <footer className="footer-section">
         <div className="footer-content">
-          <div className="footer-decoration">
+          <div className="footer-decoration heart">
             <Heart size={16} fill="#D4AF37" />
           </div>
           <p className="footer-text">{t.footerText}</p>

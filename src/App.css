@@ -789,6 +789,12 @@ body {
   margin-bottom: 20px;
 }
 
+.footer-decoration.heart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .footer-text {
   font-family: var(--font-body);
   font-size: 18px;
