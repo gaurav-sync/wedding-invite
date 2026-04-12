@@ -237,12 +237,12 @@ function App() {
         <div className="corner-decoration top-right">
           <img src="/floral-corner.png" alt="" style={{ transform: 'scaleX(-1)' }} />
         </div>
-        <div className="corner-decoration bottom-left">
+        {/* <div className="corner-decoration bottom-left">
           <img src="/floral-corner.png" alt="" style={{ transform: 'scaleY(-1)' }} />
-        </div>
-        <div className="corner-decoration bottom-right">
+        </div> */}
+        {/* <div className="corner-decoration bottom-right">
           <img src="/floral-corner.png" alt="" style={{ transform: 'scale(-1, -1)' }} />
-        </div>
+        </div> */}
 
         {/* Mandala background */}
         <div className="mandala-bg">
