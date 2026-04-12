@@ -139,32 +139,6 @@ const translations = {
 //   return marathiParts.join(' ');
 // }
 
-const BottomCornerDecor = ({ flipX = false }: { flipX?: boolean }) => (
-  <svg
-    viewBox="0 0 100 100"
-    xmlns="http://www.w3.org/2000/svg"
-    width="100%"
-    height="100%"
-    style={flipX ? { transform: 'scaleX(-1)' } : undefined}
-  >
-    {/* vertical line going up */}
-    <line x1="10" y1="90" x2="10" y2="12" stroke="#D4AF37" strokeWidth="1.5" strokeLinecap="round" opacity="0.8"/>
-    {/* horizontal line going right */}
-    <line x1="10" y1="90" x2="88" y2="90" stroke="#D4AF37" strokeWidth="1.5" strokeLinecap="round" opacity="0.8"/>
-    {/* mid-point accent dots */}
-    <circle cx="10" cy="50" r="2" fill="#D4AF37" opacity="0.5"/>
-    <circle cx="49" cy="90" r="2" fill="#D4AF37" opacity="0.5"/>
-    {/* 4-petal flower at junction */}
-    <ellipse cx="10" cy="82.5" rx="2.5" ry="6" fill="#D4AF37" opacity="0.8"/>
-    <ellipse cx="10" cy="97.5" rx="2.5" ry="6" fill="#D4AF37" opacity="0.8"/>
-    <ellipse cx="2.5" cy="90" rx="6" ry="2.5" fill="#D4AF37" opacity="0.8"/>
-    <ellipse cx="17.5" cy="90" rx="6" ry="2.5" fill="#D4AF37" opacity="0.8"/>
-    {/* center dot */}
-    <circle cx="10" cy="90" r="3.5" fill="#8B1538"/>
-    <circle cx="10" cy="90" r="1.5" fill="#D4AF37"/>
-  </svg>
-);
-
 function App() {
   const [language, setLanguage] = useState<Language>('en');
   const [guestName, setGuestName] = useState<string>('');
@@ -264,12 +238,12 @@ function App() {
         <div className="corner-decoration top-right">
           <img src="/floral-corner.png" alt="" style={{ transform: 'scaleX(-1)' }} />
         </div>
-        <div className="corner-decoration bottom-left">
-          <BottomCornerDecor />
-        </div>
-        <div className="corner-decoration bottom-right">
-          <BottomCornerDecor flipX />
-        </div>
+        {/* <div className="corner-decoration bottom-left">
+          <img src="/floral-corner.png" alt="" style={{ transform: 'scaleY(-1)' }} />
+        </div> */}
+        {/* <div className="corner-decoration bottom-right">
+          <img src="/floral-corner.png" alt="" style={{ transform: 'scale(-1, -1)' }} />
+        </div> */}
 
         {/* Mandala background */}
         <div className="mandala-bg">
