@@ -148,9 +148,9 @@ function App() {
   const t = translations[language];
   
   // Get display name based on language
-  const displayName = language === 'mr' && guestName 
-    ? convertToMarathiName(guestName)
-    : guestName;
+  // const displayName = language === 'mr' && guestName 
+  //   ? convertToMarathiName(guestName)
+  //   : guestName;
   
   // Format name for display (capitalize first letter of each word)
   const formattedName = guestName
@@ -292,7 +292,8 @@ function App() {
           {/* Personalized Greeting */}
           {guestName && (
             <div className={`personalized-greeting fade-in-delay-5 ${isVisible['hero'] ? 'visible' : ''}`}>
-              <p className="greeting-text">{t.dear} <span className="guest-name">{language === 'en' ? formattedName : displayName}</span>,</p>
+              <p className="greeting-text">{t.dear} <span className="guest-name">{formattedName}</span>,</p>
+              {/* {language === 'en' ? formattedName : displayName} */}
               <p className="greeting-message">{t.invitationMessage}</p>
             </div>
           )}
