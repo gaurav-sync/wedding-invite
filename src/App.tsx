@@ -67,77 +67,77 @@ const translations = {
 };
 
 // Function to convert English name to Marathi (transliteration)
-function convertToMarathiName(name: string): string {
-  const marathiMap: { [key: string]: string } = {
-    'a': 'अ', 'aa': 'आ', 'i': 'इ', 'ee': 'ई', 'u': 'उ', 'oo': 'ऊ',
-    'e': 'ए', 'ai': 'ऐ', 'o': 'ओ', 'au': 'औ', 'am': 'अं', 'ah': 'अः',
-    'k': 'क', 'kh': 'ख', 'g': 'ग', 'gh': 'घ', 'ng': 'ङ',
-    'ch': 'च', 'chh': 'छ', 'j': 'ज', 'jh': 'झ', 'ny': 'ञ',
-    't': 'ट', 'th': 'ठ', 'd': 'ड', 'dh': 'ढ', 'n': 'न', 'nn': 'ण',
-    'ta': 'त', 'tha': 'थ', 'da': 'द', 'dha': 'ध', 'na': 'न',
-    'p': 'प', 'ph': 'फ', 'b': 'ब', 'bh': 'भ', 'm': 'म',
-    'y': 'य', 'r': 'र', 'l': 'ल', 'v': 'व', 'w': 'व',
-    'sh': 'श', 'shh': 'ष', 's': 'स', 'h': 'ह', 'ksh': 'क्ष', 'tr': 'त्र', 'gy': 'ज्ञ',
-    ' ': ' '
-  };
+// function convertToMarathiName(name: string): string {
+//   const marathiMap: { [key: string]: string } = {
+//     'a': 'अ', 'aa': 'आ', 'i': 'इ', 'ee': 'ई', 'u': 'उ', 'oo': 'ऊ',
+//     'e': 'ए', 'ai': 'ऐ', 'o': 'ओ', 'au': 'औ', 'am': 'अं', 'ah': 'अः',
+//     'k': 'क', 'kh': 'ख', 'g': 'ग', 'gh': 'घ', 'ng': 'ङ',
+//     'ch': 'च', 'chh': 'छ', 'j': 'ज', 'jh': 'झ', 'ny': 'ञ',
+//     't': 'ट', 'th': 'ठ', 'd': 'ड', 'dh': 'ढ', 'n': 'न', 'nn': 'ण',
+//     'ta': 'त', 'tha': 'थ', 'da': 'द', 'dha': 'ध', 'na': 'न',
+//     'p': 'प', 'ph': 'फ', 'b': 'ब', 'bh': 'भ', 'm': 'म',
+//     'y': 'य', 'r': 'र', 'l': 'ल', 'v': 'व', 'w': 'व',
+//     'sh': 'श', 'shh': 'ष', 's': 'स', 'h': 'ह', 'ksh': 'क्ष', 'tr': 'त्र', 'gy': 'ज्ञ',
+//     ' ': ' '
+//   };
   
-  // Common name mappings for better accuracy
-  const commonNames: { [key: string]: string } = {
-    'akshay': 'अक्षय',
-    'rakhunde': 'राखुंडे',
-    'gaurav': 'गौरव',
-    'sakshi': 'साक्षी',
-    'rahul': 'राहुल',
-    'priya': 'प्रिया',
-    'amit': 'अमित',
-    'sneha': 'स्नेहा',
-    'vijay': 'विजय',
-    'pooja': 'पूजा',
-    'sanjay': 'संजय',
-    'anita': 'अनिता',
-    'rajesh': 'राजेश',
-    'meera': 'मीरा',
-    'nilesh': 'निलेश',
-    'swati': 'स्वाती',
-    'pravin': 'प्रवीण',
-    'deepa': 'दीपा',
-    'sunil': 'सुनील',
-    'kavita': 'कविता',
-  };
+//   // Common name mappings for better accuracy
+//   const commonNames: { [key: string]: string } = {
+//     'akshay': 'अक्षय',
+//     'rakhunde': 'राखुंडे',
+//     'gaurav': 'गौरव',
+//     'sakshi': 'साक्षी',
+//     'rahul': 'राहुल',
+//     'priya': 'प्रिया',
+//     'amit': 'अमित',
+//     'sneha': 'स्नेहा',
+//     'vijay': 'विजय',
+//     'pooja': 'पूजा',
+//     'sanjay': 'संजय',
+//     'anita': 'अनिता',
+//     'rajesh': 'राजेश',
+//     'meera': 'मीरा',
+//     'nilesh': 'निलेश',
+//     'swati': 'स्वाती',
+//     'pravin': 'प्रवीण',
+//     'deepa': 'दीपा',
+//     'sunil': 'सुनील',
+//     'kavita': 'कविता',
+//   };
   
-  const lowerName = name.toLowerCase().trim();
+//   const lowerName = name.toLowerCase().trim();
   
-  // Check if it's a common name
-  if (commonNames[lowerName]) {
-    return commonNames[lowerName];
-  }
+//   // Check if it's a common name
+//   if (commonNames[lowerName]) {
+//     return commonNames[lowerName];
+//   }
   
-  // Split by space and convert each part
-  const parts = lowerName.split(' ');
-  const marathiParts = parts.map(part => {
-    if (commonNames[part]) return commonNames[part];
+//   // Split by space and convert each part
+//   const parts = lowerName.split(' ');
+//   const marathiParts = parts.map(part => {
+//     if (commonNames[part]) return commonNames[part];
     
-    // Simple character-by-character conversion for unknown names
-    let result = '';
-    let i = 0;
-    while (i < part.length) {
-      // Try two-character match first
-      const twoChar = part.substring(i, i + 2);
-      if (marathiMap[twoChar]) {
-        result += marathiMap[twoChar];
-        i += 2;
-      } else {
-        // Try single character
-        const oneChar = part[i];
-        result += marathiMap[oneChar] || oneChar;
-        i++;
-      }
-    }
-    return result || part;
-  });
+//     // Simple character-by-character conversion for unknown names
+//     let result = '';
+//     let i = 0;
+//     while (i < part.length) {
+//       // Try two-character match first
+//       const twoChar = part.substring(i, i + 2);
+//       if (marathiMap[twoChar]) {
+//         result += marathiMap[twoChar];
+//         i += 2;
+//       } else {
+//         // Try single character
+//         const oneChar = part[i];
+//         result += marathiMap[oneChar] || oneChar;
+//         i++;
+//       }
+//     }
+//     return result || part;
+//   });
   
-  return marathiParts.join(' ');
-}
+//   return marathiParts.join(' ');
+// }
 
 function App() {
   const [language, setLanguage] = useState<Language>('en');
