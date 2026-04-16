@@ -36,6 +36,7 @@ const translations = {
     time: 'Time',
     may: 'May',
     pm: 'PM',
+    weddingPm: 'PM',
     am: 'AM',
     groomName: 'Gaurav',
     brideName: 'Sakshi',
@@ -60,6 +61,7 @@ const translations = {
     time: 'वेळ',
     may: 'मे',
     pm: 'सायंकाळी',
+    weddingPm: 'दुपारी',
     am: 'सकाळी',
     groomName: 'गौरव',
     brideName: 'साक्षी',
@@ -363,7 +365,7 @@ function App() {
                 </div>
                 <div className="detail-item">
                   <Clock size={18} />
-                  <span>12:35 {t.pm}</span>
+                  <span>12:35 {t.weddingPm}</span>
                 </div>
               </div>
             </div>
