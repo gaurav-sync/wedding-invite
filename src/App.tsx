@@ -55,7 +55,7 @@ const translations = {
     venueName: 'विठाई लॉन्स',
     getDirections: 'दिशा मिळवा',
     footerText: 'आमच्या विवाह सोहळ्यात आपण सहभागी व्हावे, ही मनापासून इच्छा!',
-    withLove: 'प्रेमाने,',
+    withLove: 'With love,',
     scrollText: 'सामील व्हा',
     date: 'तारीख',
     time: 'वेळ',
