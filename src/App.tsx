@@ -17,7 +17,7 @@ type Language = 'en' | 'mr';
 // Translation object
 const translations = {
   en: {
-    blessing: 'Together with our families',
+    blessing: 'With love and blessings of our families',
     inviteText: 'We are getting married and invite you to celebrate this special moment with us',
     dear: 'Dear',
     invitationMessage: 'Your presence will make our celebration complete',
