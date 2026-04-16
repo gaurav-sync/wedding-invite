@@ -54,7 +54,7 @@ const translations = {
     venueTitle: 'विवाह स्थळ',
     venueName: 'विठाई लॉन्स',
     getDirections: 'दिशा मिळवा',
-    footerText: 'आम्ही आपल्यासोबत साजरा करण्यास उत्सुक आहोत!',
+    footerText: 'आमच्या विवाह सोहळ्याचा आनंद आपणांसोबत साजरा करण्यास आम्ही मनापासून उत्सुक आहोत!',
     withLove: 'प्रेमाने,',
     scrollText: 'सामील व्हा',
     date: 'तारीख',
@@ -394,7 +394,7 @@ function App() {
               <p>
                 {language === 'en' 
                   ? 'Karjat Road, Jamkhed, Maharashtra 413201'
-                  : 'करजत रोड, जामखेड, महाराष्ट्र ४१३२०१'
+                  : 'कर्जत रोड, जामखेड, महाराष्ट्र ४१३२०१'
                 }
               </p>
             </div>
